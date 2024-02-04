@@ -1,4 +1,4 @@
-#This porject utilizes the following Bank data:
+#This project utilizes the following Bank data:
 
 CREATE TABLE bank_products (
     product_id INTEGER PRIMARY KEY,
@@ -29,14 +29,17 @@ VALUES
 
 #For this project, I used SQL to query the Bank database to get Checking and Savings product_type and which Savings account has the lowest interest_rate and 0 monthly_fee.
 
+#Use a SELECT statement all the bank product names so we know what our options are
 SELECT product_name
 FROM bank_products;
 
+#Show the product names that have a Checking OR Savings product type
 SELECT product_name
 FROM bank_products
 WHERE product_type = "Checking"
 OR product_type= "Savings";
 
+#Show a statistic for "Savings" account that has an interest_rate of $0.
 SELECT product_name,interest_rate
 FROM bank_products
 WHERE product_type="Savings"
